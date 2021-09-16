@@ -8,11 +8,31 @@
 
 - 1.什么是版本控制
 
-     	版本控制是指对软件开发过程中各种程序代码、[配置文件](https://baike.baidu.com/item/配置文件/286550)及说明文档等文件变更的管理，是[软件配置管理](https://baike.baidu.com/item/软件配置管理/3765602)的核心思想之一。
+     版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。
+
+     - 实现跨区域多人协同开发
+
+     - 追踪和记载一个或者多个文件的历史记录
+
+     - 组织和保护你的源代码和文档
+
+     - 统计工作量
+
+     - 并行开发、提高开发效率
+
+     - 跟踪记录整个软件的开发过程
+
+     - 减轻开发人员的负担，节省时间，同时降低人为错误
+
+       简单说就是用于管理多人协同开发项目的技术。
 
 - 2.为什么需要版本控制
 
   ​		个人开发过渡到团队协作。
+  
+  ​		没有进行版本控制或者版本控制本身缺乏正确的流程管理，在软件开发过程中将会引入很多问题，如软件代码的一致性、软件内容的冗余、软件过程的事物性、软件开发过程中的并发性、软件源代码的安全性，以及软件的整合等问题。
+  
+  ​		无论是工作还是学习，或者是自己做笔记，都经历过这样一个阶段！我们就迫切需要一个版本控制工具！
 
 ## Git安装
 
@@ -152,6 +172,16 @@ core.ignorecase=true
 core.precomposeunicode=true
 ```
 
+查看不同级别的配置文件：
+
+~~~shell
+#查看系统config
+git config --system --list
+　　
+#查看当前用户（global）配置
+git config --global  --list
+~~~
+
 编辑 git 配置文件:
 
 ```shell
@@ -163,6 +193,16 @@ $ git config -e    # 针对当前仓库
 ```shell
 $ git config -e --global   # 针对系统上所有仓库
 ```
+
+**Git相关的配置文件：**
+
+1）、Git\etc\gitconfig  ：Git 安装目录下的 gitconfig   --system 系统级
+
+2）、C:\Users\Administrator\ .gitconfig   只适用于当前登录用户的配置  --global 全局
+
+![图片](https://mmbiz.qpic.cn/mmbiz_png/uJDAUKrGC7Ksu8UlITwMlbX3kMGtZ9p0hcJS0rxj3qoCVvfDKh3WxwQJlSV3P15EIZuejraOwXLdic6NCB8X8oQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+这里可以直接编辑配置文件，通过命令设置后会响应到这里。
 
 设置提交代码时的用户信息：
 
@@ -242,6 +282,26 @@ Git 的工作就是创建和保存你的项目的快照及与之后的快照进�
 | `git fetch`  |  从远程获取代码库  |
 | `git pull`   | 下载远程代码并合并 |
 | `git push`   | 上传远程代码并合并 |
+
+### Git免密提交
+
+1.生成公钥对
+
+~~~shell
+ssh-keygen -t rsa -C "自己的邮箱"
+id_rsa 私钥  id_rsa.pub 公钥
+~~~
+
+2.将公钥添加到远程仓库(码云，github)
+
+3.测试连接
+
+~~~~shell
+ssh -T git@github.com
+可以看到获取认证
+~~~~
+
+
 
 ## Git分支
 
