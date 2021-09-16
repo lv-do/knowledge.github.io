@@ -864,7 +864,7 @@ test.java  ztx
 
 ## 小结
 
-![image-20200611085918923](C:\Users\ZTX\Desktop\markdownx学习\Docker概述(1).assets\image-20200611085918923.png)
+![image-20200611085918923](Docker概述.assets/image-20200611085918923.png)
 
 ```shell
   attach      Attach to a running container 	      # 当前shell下attach连接指定运行的镜像
@@ -943,7 +943,7 @@ conf.d	fastcgi_params	koi-utf  koi-win  mime.types  modules  nginx.conf  scgi_pa
 
 **端口暴露的概念**
 
-![image-20200611085948617](C:\Users\ZTX\Desktop\markdownx学习\Docker概述(1).assets\image-20200611085948617.png)
+![image-20200611085948617](Docker概述.assets/image-20200611085948617.png)
 
 **思考问题：**我们每次改动nginx配置文件，都需要进入容器内部？十分麻烦，我要是可以在容器外部提供一个映射路径，达到在容器外部修改文件名，容器内部就可以自动修改？-v 数据卷 技术！
 
@@ -989,7 +989,7 @@ ROOT  docs  examples  host-manager  manager
 
 拷贝完成就可以访问了：
 
-![image-20200611090019494](C:\Users\ZTX\Desktop\markdownx学习\Docker概述(1).assets\image-20200611090019494.png)
+![image-20200611090019494](Docker概述.assets/image-20200611090019494.png)
 
 **思考问题：**我们以后要部署项目，如果每次都要进入容器是不是十分麻烦？我要是可以在容器外部提供映射路径，webapps,我们在外部放置项目，就自动同步到内部就好了！
 
