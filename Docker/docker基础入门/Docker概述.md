@@ -51,7 +51,7 @@
 
 Docker给以上的问题，提出了解决方案！
 
-![image-20200610142308099](Docker概述.assets%5Cimage-20200610142308099.png)
+![image-20200610142308099](Docker概述.assets/image-20200610142308099.png)
 
 Docker的思想来源于集装箱！
 
@@ -104,7 +104,7 @@ Docker基于Go语言开发的！开源项目！
 
 docker官网：https://www.docker.com/
 
-![image-20200610143923433](Docker概述.assets%5Cimage-20200610143923433.png)
+![image-20200610143923433](Docker概述.assets/image-20200610143923433.png)
 
 文档：https://docs.docker.com/ Docker的文档是超级详细的！
 
@@ -114,7 +114,7 @@ docker官网：https://www.docker.com/
 
 > 之前的虚拟机技术
 
-![image-20200610144126122](Docker概述.assets%5Cimage-20200610144126122.png)
+![image-20200610144126122](Docker概述.assets/image-20200610144126122.png)
 
 > 虚拟机技术缺点
 
@@ -128,7 +128,7 @@ docker官网：https://www.docker.com/
 
 容器化技术不是模拟一个完整的操作系统
 
-![image-20200610144338073](Docker概述.assets%5Cimage-20200610144338073.png)
+![image-20200610144338073](Docker概述.assets/image-20200610144338073.png)
 
 比较Docker和虚拟机技术的不同：
 
@@ -166,7 +166,7 @@ Docker是内核级别的虚拟化，可以在一个物理机上运行很多个�
 
 ## Docker的基本组成
 
-![image-20200610145818895](Docker概述.assets%5Cimage-20200610145818895.png)
+![image-20200610145818895](Docker概述.assets/image-20200610145818895.png)
 
 **镜像（image）：**
 
@@ -271,14 +271,14 @@ systemctl start docker
 docker version
 ```
 
-![image-20200610153718450](Docker概述.assets%5Cimage-20200610153718450.png)
+![image-20200610153718450](Docker概述.assets/image-20200610153718450.png)
 
 ```shell
 #7.测试
 docker run hello-world
 ```
 
-![image-20200610154108118](Docker概述.assets%5Cimage-20200610154108118.png)
+![image-20200610154108118](Docker概述.assets/image-20200610154108118.png)
 
 ```shell
 #8.查看一下下载的hello-world镜像
@@ -303,7 +303,7 @@ rm -rf /var/lib/docker
 
 **1、登录阿里云找到容器服务——>镜像加速器**
 
-![image-20200610155156310](Docker概述.assets%5Cimage-20200610155156310.png)
+![image-20200610155156310](Docker概述.assets/image-20200610155156310.png)
 
 **2、配置使用**
 
@@ -325,11 +325,11 @@ sudo systemctl restart docker
 
 ## 回顾hello-world流程
 
-![image-20200610160359287](Docker概述.assets%5Cimage-20200610160359287.png)
+![image-20200610160359287](Docker概述.assets/image-20200610160359287.png)
 
 **docker run 流程图**
 
-![image-20200610160609037](Docker概述.assets%5Cimage-20200610160609037.png)
+![image-20200610160609037](Docker概述.assets/image-20200610160609037.png)
 
 ## 底层原理
 
@@ -339,7 +339,7 @@ Docker是一个Client-Server结构的系统，Docker的守护进程运行在宿�
 
 DockerServer接受到Docker-Client的指令，就会执行这个命令！
 
-![image-20200610161147612](Docker概述.assets%5Cimage-20200610161147612.png)
+![image-20200610161147612](Docker概述.assets/image-20200610161147612.png)
 
 **Docker为什么比VM快？**
 
@@ -347,11 +347,11 @@ DockerServer接受到Docker-Client的指令，就会执行这个命令！
 
 2、Docker利用的是宿主机的内核，vm需要Guest Os。
 
-![image-20200610161342662](Docker概述.assets%5Cimage-20200610161342662.png)
+![image-20200610161342662](Docker概述.assets/image-20200610161342662.png)
 
 所以说，新建一个容器的时候，docker不需要像虚拟机一样重新加载一个操作系统内核，避免引导。虚拟机是加载Guest Os，分钟级别的，而docker是利用当前宿主机的操作系统，省略了复杂的过程，秒级的！
 
-![image-20200610161845790](Docker概述.assets%5Cimage-20200610161845790.png)
+![image-20200610161845790](Docker概述.assets/image-20200610161845790.png)
 
 ---
 
@@ -455,7 +455,7 @@ docker.io/library/mysql:5.7
 
 ```
 
-![image-20200610165130055](Docker概述.assets%5Cimage-20200610165130055.png)
+![image-20200610165130055](Docker概述.assets/image-20200610165130055.png)
 
 **docker rmi 删除镜像**
 
@@ -1032,7 +1032,7 @@ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=
 # 查看docker容器占用资源情况
 ```
 
-![image-20200611124706727](Docker概述.assets%5Cimage-20200611124706727.png)
+![image-20200611124706727](Docker概述.assets/image-20200611124706727.png)
 
 ```shell
 # 赶紧关闭容器，增加内存限制，修改配置文件 -e 环境配置修改
@@ -1041,7 +1041,7 @@ docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e "discovery.typ
  # 查看docker容器占用资源情况
 ```
 
-![image-20200611124755826](Docker概述.assets%5Cimage-20200611124755826.png)
+![image-20200611124755826](Docker概述.assets/image-20200611124755826.png)
 
 ```shell
 [root@localhost /]# curl localhost:9200
@@ -1068,7 +1068,7 @@ docker run -d --name elasticsearch02 -p 9200:9200 -p 9300:9300 -e "discovery.typ
 
 > 作业4：使用 kibana 连接 es ? 思考网络如何才能连接过去！
 
-![image-20200611125352717](Docker概述.assets%5Cimage-20200611125352717.png)
+![image-20200611125352717](Docker概述.assets/image-20200611125352717.png)
 
 ## 可视化
 
@@ -1096,17 +1096,17 @@ docker run -d -p 8088:9000 \
 
 通过它来访问了;
 
-![image-20200611141621853](Docker概述.assets%5Cimage-20200611141621853.png)
+![image-20200611141621853](Docker概述.assets/image-20200611141621853.png)
 
 选择本地的：
 
-![image-20200611142004773](Docker概述.assets%5Cimage-20200611142004773.png)
+![image-20200611142004773](Docker概述.assets/image-20200611142004773.png)
 
 进入之后的面板：
 
-![image-20200611144838665](Docker概述.assets%5Cimage-20200611144838665.png)
+![image-20200611144838665](Docker概述.assets/image-20200611144838665.png)
 
-![image-20200611144900114](Docker概述.assets%5Cimage-20200611144900114.png)
+![image-20200611144900114](Docker概述.assets/image-20200611144900114.png)
 
 可视化面板我们平时不会使用，大家自己测试玩玩即可！
 
@@ -1143,11 +1143,11 @@ docker的镜像实际上由一层一层的文件系统组成，这种层级的�
 boots(boot file system）主要包含 bootloader和 Kernel, bootloader主要是引导加载 kernel, Linux刚启动时会加载bootfs文件系统，在 Docker镜像的最底层是 boots。这一层与我们典型的Linux/Unix系统是一样的，包括bootloader和 Kernel。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由 bootfs转交给内核，此时系统也会卸载bootfs。
 
 rootfs（root file system),在 bootfs之上。包含的就是典型 Linux系统中的/dev,/proc,/bin,/etc等标准目录和文件。 rootfs就是各种不同的操作系统发行版，比如 Ubuntu, Centos等等。
-![image-20200611162007055](Docker概述.assets%5Cimage-20200611162007055.png)
+![image-20200611162007055](Docker概述.assets/image-20200611162007055.png)
 
 平时我们安装进虚拟机的CentOS都是好几个G，为什么Docker这里才200M？
 
-![image-20200611162057734](Docker概述.assets%5Cimage-20200611162057734.png)
+![image-20200611162057734](Docker概述.assets/image-20200611162057734.png)
 
 对于个精简的OS, rootfs可以很小，只需要包合最基本的命令、工具和程序库就可以了，因为底层直接用Host的kernel，自己只需要提供rootfs就可以了。由此可见对于不同的Linux发行版， boots基本是一致的， rootfs会有差別，因此不同的发行版可以公用bootfs.
 
@@ -1157,7 +1157,7 @@ rootfs（root file system),在 bootfs之上。包含的就是典型 Linux系统�
 
 > 分层的镜像
 
-我们可以去下载一个镜像，注意观察下载的日志输出，可以看到是一层层的在下载！![image-20200611163839741](Docker概述.assets%5Cimage-20200611163839741.png)
+我们可以去下载一个镜像，注意观察下载的日志输出，可以看到是一层层的在下载！![image-20200611163839741](Docker概述.assets/image-20200611163839741.png)
 
 **思考：为什么Docker镜像要采用这种分层的结构呢？**
 
@@ -1294,17 +1294,17 @@ rootfs（root file system),在 bootfs之上。包含的就是典型 Linux系统�
 
 该镜像当前已经包含3个镜像层，如下图所示（这只是一个用于演示的很简单的例子）。
 
-![image-20200611163818495](Docker概述.assets%5Cimage-20200611163818495.png)
+![image-20200611163818495](Docker概述.assets/image-20200611163818495.png)
 
 在添加额外的镜像层的同时，镜像始终保持是当前所有镜像的组合，理解这一点非常重要。下图中举了一个简单的例子，每个镜像层包含3个文件，而整体的大镜像包含了来自两个镜像层的6个文件。
 
-![image-20200611164322267](Docker概述.assets%5Cimage-20200611164322267.png)
+![image-20200611164322267](Docker概述.assets/image-20200611164322267.png)
 
 上图中的镜像层跟之前图中的略有区別，主要目的是便于展示文件。
 
 下图中展示了一个稍微复杂的三层镜像，在外部看来整个镜像只有6个文件，这是因为最上层中的文件7是文件5的一个更新版。
 
-![image-20200611164447964](Docker概述.assets%5Cimage-20200611164447964.png)
+![image-20200611164447964](Docker概述.assets/image-20200611164447964.png)
 
 这种情況下，上层镜像层中的文件覆盖了底层镜像层中的文件。这样就使得文件的更新版本作为一个新镜像层添加到镜像当中。
 
@@ -1320,7 +1320,7 @@ Docker在 Windows上仅支持 windowsfilter 一种存储引擎，该引擎基于
 
 Docker 镜像都是只读的，当容器启动时，一个新的可写层加载到镜像的顶部！
 
-这一层就是我们通常说的容器层，容器之下的都叫镜像层！![image-20200611165355825](Docker概述.assets%5Cimage-20200611165355825.png)
+这一层就是我们通常说的容器层，容器之下的都叫镜像层！![image-20200611165355825](Docker概述.assets/image-20200611165355825.png)
 
 
 
@@ -1347,7 +1347,7 @@ docker commit -m="描述信息" -a="作者" 容器id 目标镜像名:[版本TAG]
 #4、将我们操作过的容器通过commit提交为一个镜像！我们以后就可以使用我们修改过的镜像了，这就是我们自己的一个修改的镜像
 ```
 
-![image-20200611172701729](Docker概述.assets%5Cimage-20200611172701729.png)
+![image-20200611172701729](Docker概述.assets/image-20200611172701729.png)
 
 ```shell
 如果你想要保存当前容器的状态，就可以通过commit来提交，获得一个镜像，就好比我们我们使用虚拟机的快照。
