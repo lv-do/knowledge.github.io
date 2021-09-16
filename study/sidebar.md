@@ -1,1 +1,0 @@
-* [Git](study/Git.md)
