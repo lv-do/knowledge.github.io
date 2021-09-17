@@ -3,5 +3,3 @@
 * [Docker进阶](Docker/docker进阶/Docker进阶.md)
 * [Linux基础使用](Linux/Linux.md)
 * [PDF文档](/PDF/catalog.md)
-  * [ElasticSearch](https://lv-do.github.io/knowledge.github.io/PDF/38、ElasticSearch.pdf)
-  * [Redis](https://lv-do.github.io/knowledge.github.io/PDF/37、Redis.pdf)
