@@ -2,4 +2,5 @@
 * [Docker基础入门](Docker/docker基础入门/Docker概述.md)
 * [Docker进阶](Docker/docker进阶/Docker进阶.md)
 * [Linux基础使用](Linux/Linux.md)
+* [Rabbit基本使用](RabbitMq/RabbitMQ.md)
 * [PDF文档](/PDF/catalog.md)
